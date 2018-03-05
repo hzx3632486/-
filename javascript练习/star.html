@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html onclick="star(event)">
+<head>
+	<title>star</title>
+	<script type="text/javascript">
+		function star(e){
+			var obj = document.createElement("img");
+			obj.src="star.jpg"
+			var w = Math.floor(Math.random()*(100-20)+20);
+			obj.width = w;
+			var x = e.clientX;
+			var y = e.clientY;
+			obj.style.position='absolute';
+			obj.style.top=y+"px";
+			obj.style.left=x+"px";
+			document.body.appendChild(obj);
+		}
+	</script>
+</head>
+<body>
+   
+</body>
+</html>

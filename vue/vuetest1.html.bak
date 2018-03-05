@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title></title>
+ </head>
+
+ <body>
+    <!--这是view-->
+    <div id="app">
+	    <p>{{message}}</p>
+		<input type="text" v-model="message"/>
+	</div>
+ </body>
+   <script src="vue.js"></script>
+   <script>
+      //这是Model
+       var exampleData = {
+	      message:'hello world!'
+	   }
+	   //创建一个Vue实例或“ViewModel”
+	   //它连接View与Model
+	   new Vue({
+	   el:'#app',
+	   data: exampleData
+	   })
+   </script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	  watchdemo
+	</title>
+</head>
+<body>
+   <div id="demo">
+   	  {{fullname}}
+   </div>
+</body>
+<script src="vue.js"></script>
+<script type="text/javascript">
+	var vm = new Vue({
+		el:'#demo',
+		data:{
+			firstname:'foo',
+			lastname:'bar'
+		},
+		computed:{
+			fullname:{
+			get:function(){
+				return this.firstname+' '+this.lastname
+			},
+			set:function(newValue){
+				var names = newValue.split(' ')
+				this.firstname = names[0]
+				this.lastname = names[names.length-1]
+			}
+		}
+	}
+		
+	})
+</script>
+</html>
